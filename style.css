@@ -1,0 +1,241 @@
+@import url(//fonts.googleapis.com/css?family=Roboto:400, 100);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, verdana;
+  text-align: justify;
+  font-size: 18px;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 1.2em;
+}
+h1 {
+  text-align: center;
+  font-size: 3.7em;
+  text-shadow: #000 0px 0px 5px;
+}
+h2 {
+  text-align: center;
+  font-size: 3em;
+}
+h3 {
+  font-size: 2em;
+}
+h5 {
+  text-align: center;
+  font-size: 1.7em;
+}
+a {
+  text-decoration: none;
+  text-shadow: 0 0 1px #fff;
+  color: #fff;
+  transition: all 300ms ease;
+}
+a:hover {
+  text-shadow: 0 0 0.25em #dfd;
+}
+a:focus {
+  text-shadow: 0px 1px 3px #dfd;
+}
+input,
+textarea {
+  width: 90%;
+}
+button[type="submit"] {
+  border: 1px solid;
+  padding: 0.25em 1em;
+}
+#body-wrapper img{width:100%;}
+#header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      10deg,
+      rgba(29, 181, 253, 0.8),
+      rgba(239, 215, 50, 0.8)
+    ),
+    url("http://lorempixel.com/40/30/");
+  background-size: auto, cover;
+}
+#navbar {
+  background-color: #f32012;
+  background: linear-gradient(
+    35deg,
+    #980023 0%,
+    #a90374 25%,
+    #4b03a9 49%,
+    #00adff 100%
+  );
+  color: #fff;
+}
+
+#navbar.fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#navbar ul,
+#footer ul {
+  list-style: none;
+  text-align: center;
+  padding: 15px;
+}
+#footer ul {
+  padding: 2em;
+}
+#navbar ul li,
+#footer ul li {
+  display: inline-block;
+  position: relative;
+  padding: 0 1em;
+}
+#navbar ul li a,
+#footer ul li a {
+  text-decoration: none;
+  padding: 0.5em;
+  text-transform: uppercase;
+  color: #cecece;
+  display: inline-block;
+  border: 3px solid transparent;
+}
+
+#navbar ul li a:after {
+  content: "";
+  bottom: 0;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#navbar ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+#navbar .logo img {
+  height: 2.5em;
+  float: left;
+  margin: 0.75em 2em;
+}
+.body-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background: url("http://lorempixel.com/10/50") no-repeat 50% 50% fixed;
+  background-size: cover;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 5em 10%; /* padding-top higher than #navbar full height */
+  box-sizing: border-box;
+}
+
+.extra-block {
+  margin: 0 auto;
+  color: #fff;
+  padding: 7em 5em;
+  background: linear-gradient(
+      23deg,
+      rgba(250, 120, 80, 0.6),
+      rgba(150, 0, 0, 0.8)
+    ),
+    url("http://lorempixel.com/100/30/");
+  background-size: auto, cover;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+.flex > * {
+  flex: 1;
+  padding: 0 5% 0 0;
+}
+.flex > *:first-child {
+  flex: 0 1 100%;
+}
+
+#home-section {
+  background: linear-gradient(-40deg, #c84dfb 0%, #ffb300 100%);
+}
+#about-section {
+  background: linear-gradient(15deg, #e0d030 0%, #9c51b6 50%, #f5580e 100%);
+}
+#products-section {
+  color: #effef7;
+  background: linear-gradient(-25deg, #e0d030 0%, #b810e0 100%);
+  text-shadow: 1px 0 1px #000;
+}
+#contact-section {
+  background: linear-gradient(-60deg, #ff5050 0%, #5c50a0 100%);
+}
+#footer {
+  background: linear-gradient(
+    35deg,
+    #f54777 0%,
+    #ef571c 31%,
+    #f3242d 68%,
+    #fdaa44 100%
+  );
+}
+
+.about a {
+  color: #babbbc;
+}
+.back-to-top {
+  font-family: verdana;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  right: 0.25em;
+  font-size: 4em;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 900px) {
+  #navbar {
+    background-color: orange;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #navbar ul {
+    margin: 1em auto;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+  }
+
+  #navbar ul li {padding:0 .1em;
+  }
+
+  #navbar ul li:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  #navbar:hover ul {
+  }
+  #navbar a {
+    font-size: 2.5vw
+  }
+}
